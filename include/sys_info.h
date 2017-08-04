@@ -1,0 +1,5 @@
+// for Sys information
+#define SYS_COMPILER_VERSION "12"
+#define SYS_COMPILER_DATE "20100915"
+#define SYS_COMPILER_CLOCK "1437"
+#define SYS_COMPILER_USERNAME "d"

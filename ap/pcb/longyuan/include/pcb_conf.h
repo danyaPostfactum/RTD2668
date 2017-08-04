@@ -1,0 +1,67 @@
+//
+//
+//
+#ifndef _PCB_CONF_H
+#define _PCB_CONF_H
+
+#include "sparrow.h"
+#include "pcb\pcb_conf_def.h"
+/*================================ Definitions ==============================*/
+#define _XTAL_CLOCK						_XTAL_27M
+/*
+#define UART_MONITOR_SOURCE				UART_SOURCE_0
+
+// Set options for UART0
+#define UART_SOURCE_0_BAUDRATE			UART_BAUDRATE_115200
+#define UART_SOURCE_0_PARITY_SELECT		UART_PARITY_SELECT_ODD
+#define UART_SOURCE_0_PARITY_ENABLE		UART_PARITY_DISABLE
+#define UART_SOURCE_0_STOP_BITS			UART_STOP_BITS_1
+#define UART_SOURCE_0_DATA_BITS			UART_DATA_BITS_8
+
+// Set options for UART1
+#define UART_SOURCE_1_BAUDRATE			UART_BAUDRATE_115200
+#define UART_SOURCE_1_PARITY_SELECT		UART_PARITY_SELECT_ODD
+#define UART_SOURCE_1_PARITY_ENABLE		UART_PARITY_DISABLE
+#define UART_SOURCE_1_STOP_BITS			UART_STOP_BITS_1
+#define UART_SOURCE_1_DATA_BITS			UART_DATA_BITS_8
+*/
+/*
+// Set GPIO number for specified purpose
+#define GPIO_AUDIO_AMP_MUTE				GPIO16
+#define GPIO_LED_RED						GPIO15
+#define GPIO_LED_GREEN						GPIO14
+#define GPIO_TUNER_POWER_ENABLE			GPIO13
+#define GPIO_PVR_SWITCH_ENABLE			GPIO12
+#define GPIO_AV_PVR_SEL					GPIO10
+#define GPIO_BACKLIGHT_POWER_ENABLE		GPIO9
+#define GPIO_PANEL_POWER_ENABLE			GPIO8
+#define GPIO_HDMI0_HOT_PLUG				GPIO7
+#define GPIO_HDMI1_HOT_PLUG				GPIO6
+#define GPIO_HDMI2_HOT_PLUG				GPIO5
+#define GPIO_POWER_KEY					GPIO4
+
+// Set GPIO number for specified purpose
+#define GPIO_SCART_FUNCTION_SELECT		GPIO16
+
+// Set PWM
+#define GPIO_PWM_BACKLIGH					PWM_0
+*/
+// Parameter in ADC
+#define ADC_SH_GAIN 					ADC_SH_GAIN_a
+#define ADC_BANDWIDTH 					ADC_BANDWIDTH_300M
+#define ADC_INPUT_ENDED_TYPE 			ADC_INPUT_DIFFERENTIAL_ENDED
+#define ADC_BANDGAP_VOLTAGE 			ADC_BANDGAP_VOLTAGE_1
+#define ADC_SOG0_INPUT_MUX_SELECT
+#define ADC_SOG1_INPUT_MUX_SELECT
+
+// Parameter in On Measure
+#define ON_MEASURE_HSYNC_MAX_DELTA		4		// 0: 1 clock, 1: 1 clock, 2: 2 clock, 3: 3 clock, 4~31 : 4~31 clock
+#define ON_MEASURE_VSYNC_MAX_DELTA		2		// 0: 1 HSYNC, 1: 1 HSYNC, 2: 2 HSYNC, 3: 3 HSYNC, 4~15: 4~15 HSYNC
+
+#define IFD_VIDEO_OUTPUT_GAIN 0x0  //0: Gain=1, 1: Gain=2, 2: Gain=4
+#define VDC_AVOUT_SIB_FOR_TV	0x20
+#define VDC_AVOUT_SOURCE_FOR_TV VDC_AVOUT_CVBS_WITH_FIL_WITH_AGC
+#define VDC_AVOUT_SIB	0x20
+#define VDC_AVOUT_SOURCE VDC_AVOUT_CVBS_WITH_FIL_WITH_AGC
+
+#endif //#ifndef _PCB_CONF_H

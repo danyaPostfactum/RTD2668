@@ -1,0 +1,3 @@
+---- QN_ChipInitialization Matches (2 in 1 files) ----
+I2c.c (drivers\i2c):void QN_ChipInitialization()
+I2c.c (drivers\i2c):    QN_ChipInitialization();

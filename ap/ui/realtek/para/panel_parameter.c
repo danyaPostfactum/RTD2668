@@ -1,0 +1,117 @@
+/*=============================================
+  * Copyright (c)      Realtek Semiconductor Corporation, 2005
+  * All rights reserved.
+  * ============================================ */
+
+/*================= File Description ================= */
+/**
+ * @file
+ * The file is a declaration and definition header file
+ *
+ * @author 	$Author:  $
+ * @date 	$Date:  $
+ * @version 	$Revision:  $
+ * @ingroup
+ */
+
+/**
+* @addtogroup
+* @{
+*/
+#include "autoconf.h"
+#include "panel\panel.h"
+#include "panel\panel_struct.h"
+
+STRUCT_PANEL_PARAMETER code stPanelData =
+{
+#ifdef CONFIG_PANEL_NAME
+    CONFIG_PANEL_NAME,
+#else
+//	CONFIG_PANEL_NAME_DEFAULT,
+    { 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,  0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff},
+#endif
+#if 0
+    (CONFIG_DISPLAY_PORT & 0x01) |
+    (CONFIG_DISPLAY_COLOR_BITS & 0x03) << 1 |
+    (CONFIG_DISPLAY_EVEN_RSV1_BIT & 0x01) << 3 |
+    (CONFIG_DISPLAY_ODD_RSV1_BIT & 0x01) << 4 |
+    (CONFIG_DISPLAY_BITMAPPING_TABLE & 0x01) << 5 |
+    (CONFIG_DISPLAY_PORTAB_SWAP & 0x01) << 6 |
+    (CONFIG_DISPLAY_RED_BLUE_SWAP & 0x01) << 7 |
+    (CONFIG_DISPLAY_MSB_LSB_SWAP & 0x01) << 8 |
+    (CONFIG_DISPLAY_SKEW_DATA_OUTPUT & 0x01) << 9 |
+    (CONFIG_DISPLAY_OUTPUT_INVERSE & 0x01) << 10 |
+    (CONFIG_DISPLAY_VERTICAL_SYNC & 0x01) << 11 |
+    (CONFIG_DISPLAY_HORIZONTAL_SYNC & 0x01) << 12 |
+    (CONFIG_DISPLAY_VERTICAL_SYNC_NORMAL & 0x01) << 13 |
+    (CONFIG_DISPLAY_HORIZONTAL_SYNC_NORMAL & 0x01) << 14 |
+    (CONFIG_DISPLAY_RATIO_4X3 & 0x01) << 15,
+#else
+    CONFIG_DISPLAY_PORT,
+    CONFIG_DISPLAY_COLOR_BITS,
+    CONFIG_DISPLAY_EVEN_RSV1_BIT,
+    CONFIG_DISPLAY_ODD_RSV1_BIT,
+    CONFIG_DISPLAY_BITMAPPING_TABLE,
+    CONFIG_DISPLAY_PORTAB_SWAP,
+    CONFIG_DISPLAY_RED_BLUE_SWAP,
+    CONFIG_DISPLAY_MSB_LSB_SWAP,
+    CONFIG_DISPLAY_SKEW_DATA_OUTPUT,
+    CONFIG_DISPLAY_OUTPUT_INVERSE,
+    CONFIG_DISPLAY_VERTICAL_SYNC,
+    CONFIG_DISPLAY_HORIZONTAL_SYNC,
+    CONFIG_DISPLAY_VERTICAL_SYNC_NORMAL,
+    CONFIG_DISPLAY_HORIZONTAL_SYNC_NORMAL,
+    CONFIG_DISPLAY_RATIO_4X3,
+#endif
+
+    CONFIG_DISPLAY_CLOCK_MAX,
+
+    CONFIG_DISPLAY_REFRESH_RATE,
+
+    CONFIG_DISPLAY_CLOCK_TYPICAL,
+
+    CONFIG_DISP_HORIZONTAL_TOTAL,
+
+    CONFIG_DISP_VERTICAL_TOTAL,
+
+    CONFIG_DISP_HSYNC_WIDTH,
+
+    CONFIG_DISP_VSYNC_LENGTH,
+
+    CONFIG_DISP_DEN_STA_HPOS,
+
+    CONFIG_DISP_DEN_END_HPOS - CONFIG_DISP_DEN_STA_HPOS,
+
+    CONFIG_DISP_DEN_STA_VPOS,
+
+    CONFIG_DISP_DEN_END_VPOS - CONFIG_DISP_DEN_STA_VPOS,
+
+    CONFIG_DISP_ACT_STA_HPOS,
+
+    CONFIG_DISP_ACT_END_HPOS - CONFIG_DISP_ACT_STA_HPOS,
+
+    CONFIG_DISP_ACT_STA_VPOS,
+
+    CONFIG_DISP_ACT_END_VPOS - CONFIG_DISP_ACT_STA_VPOS,
+
+    CONFIG_DISP_HSYNC_LASTLINE,
+
+    CONFIG_DISP_DCLK_DELAY,
+
+    _CONFIG_DISP_ACT_STA_BIOS,
+
+    CONFIG_DEFAULT_DPLL_M_DIVIDER,
+
+    CONFIG_DEFAULT_DPLL_N_DIVIDER,
+
+    PANEL_TO_LVDS_ON_ms,
+
+    LVDS_TO_LIGHT_ON_ms,
+
+    LIGHT_TO_LDVS_OFF_ms,
+
+    LVDS_TO_PANEL_OFF_ms,
+
+    PANEL_OFF_TO_ON_ms
+};
+
